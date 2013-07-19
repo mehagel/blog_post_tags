@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Welcome to Sinatra!</h1>
+  <p>Hello, world!</p>
+
+<form method="post" action="/create_post">
+  Title: <input type="text" name='title'><br>
+  Body: <input type="text" name="body"><br>
+  Tag: <input type="text" name="tag">
+<button>Submit</button>
+</form>
+
+<div><% @tags.each do |tag| %>
+  <%= tag.tag %>
+  <%end%>
+</div>
+
+
+<ul>
+  <% @posts.each do |post| %>
+  <li><a href="/post/<%= post.id %>"><%= post.title %></a><p><%= post.body %></p>
+  </li>
+  <% end %>
+</ul>
+
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+  <p>Hello, world!</p>
+<!-- <div>
+<p><%= @post.title %></p>
+<p><%= @post.id%></p>
+</div> -->
+<form method="post" action="/edit_post">
+  ID: <input type="text" name='id' value='<%= @post.id%>' readonly><br>
+  Title: <input type="text" name='title' value='<%= @post.title%>'><br>
+  Body: <input type="text" name="body" value='<%= @post.body%>'><br>
+  Tag: <input type="text" name="tag">
+<button>Submit</button><br>
+</form>
+
+
+<form method="post" action= '/delete_post'>
+  ID: <input type="text" name='id' value='<%= @post.id%>' readonly><br>
+  Title: <input type="text" name='title' value='<%= @post.title%>'readonly><br>
+  Body: <input type="text" name="body" value='<%= @post.body%>'readonly><br>
+<button>Delete</button>
+</form>
+
